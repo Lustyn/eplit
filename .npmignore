@@ -1,0 +1,8 @@
+node_modules/
+*.mkv
+*.ts
+*.eplit.json
+.gitignore
+!src/**/*.ts
+!example.eplit.json
+!dist/

@@ -1,0 +1,41 @@
+{
+    "inputs": [
+        {
+            "filename": "input.mkv",
+            "segments": [
+                {
+                    "from": "00:00:5.000",
+                    "to": "00:00:28.000",
+                    "id": "intro",
+                    "name": "Intro"
+                },
+                {
+                    "from": "00:00:30.000",
+                    "id": "ep1",
+                    "name": "Episode 1"
+                },
+                {
+                    "from": "00:10:30.000",
+                    "id": "ep2",
+                    "name": "Episode 2"
+                },
+                {
+                    "from": "00:20:30.000",
+                    "id": "outro",
+                    "name": "Outro"
+                }
+            ]
+        }
+    ],
+    "outputs": [
+        {
+            "filename": "episode1.mkv",
+            "segments": ["intro", "ep1", "outro"]
+        },
+        {
+            "filename": "episode2.mkv",
+            "segments": ["intro", "ep2", "outro"],
+            "chapters": false
+        }
+    ]
+}
