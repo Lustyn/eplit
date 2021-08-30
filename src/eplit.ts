@@ -63,7 +63,7 @@ export async function eplit(file: EplitFile): Promise<void> {
         };
 
         log(`Merging ${output.filename}`);
-        await mkvMerge(output.filename, files, chapterFile ? ["--chapters", chapterFile] : []);
+        await mkvMerge(output.filename, files, chapterFile ? ["--chapters", chapterFile] : [], chapterFile ? ["--no-chapters"] : []);
         if (chapterFile) {
             debug(`Deleting ${chapterFile}`);
             await fs.unlink(chapterFile);

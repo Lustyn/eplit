@@ -82,11 +82,12 @@ export function mkvSplit(input: string, output: string, segments: [string, strin
     ]);
 };
 
-export function mkvMerge(output: string, files: string[], flags: string[] = []) {
+export function mkvMerge(output: string, files: string[], flags: string[] = [], fileFlags: string[] = []) {
     return run("mkvmerge", [
         "-q",
         ...flags,
         "-o", output,
+        ...fileFlags,
         "[", ...files, "]"
     ]);
 };
